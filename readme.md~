@@ -1,0 +1,3 @@
+please follow these steps to collect dataset:
+1.#sudo modprobe uvcvideo# in termenal to load uvcvideo.
+

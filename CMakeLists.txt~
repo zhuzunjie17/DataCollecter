@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.8.3)
+
+project(BGR)
+
+set(CMAKE_EXPROT_COMPILE_COMMAND 1)
+
+set(CMAKE_CXX_COMPILE "g++")
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_CXX_FLAG ${CMAKE_CXX_FLAGS} "-std=c++11 -lrealsense")
+
+find_package(OpenCV REQUIRED)
+set(DEPENDENCIES realsense ${OPENCV_LIBS})
+
+add_executable(BGR BGR_sample.cpp)
+target_link_libraries(BGR ${DEPENDENCIES} realsense)
