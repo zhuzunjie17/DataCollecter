@@ -1,12 +1,12 @@
 Device 0 - Intel RealSense ZR300:
- Serial number: 3511804114
+ Serial number: 4071801432
  Firmware version: 2.0.71.28
- USB Port ID: 4-4-1-2
+ USB Port ID: 4-4-3-2
  Adapter Board Firmware version: 1.29.0.0
  Motion Module Firmware version: 1.25.0.0
  Camera info: 
     DEVICE_NAME         : 	Intel RealSense ZR300
-    DEVICE_SERIAL_NUMBER: 	3511804114
+    DEVICE_SERIAL_NUMBER: 	4071801432
     CAMERA_FIRMWARE_VERSION: 	2.0.71.28
     ADAPTER_BOARD_FIRMWARE_VERSION: 	1.29.0.0
     MOTION_MODULE_FIRMWARE_VERSION: 	1.25.0.0
@@ -66,214 +66,228 @@ Device 0 - Intel RealSense ZR300:
     FISHEYE_AUTO_EXPOSURE_SKIP_FRAMES                  : 2    ... 3           1     2         
     FRAMES_QUEUE_SIZE                                  : 1    ... 20          1     20        
     HARDWARE_LOGGER_ENABLED                            : 0    ... 1           1     0         
-
-COLOR CALIBERATED PARAMETERS:
-Camera.fx: 619.362
-Camera.fy: 621.976
-Camera.cx: 315.294
-Camera.cy: 242.406
-
-Camera.k1: 0.0721324
-Camera.k2: -0.1235923
-Camera.p1: -0.0005962
-Camera.p2: -0.0005710 
-
-camera-imu frame transformation
-Camera.Tbc:
- [0.999927, 0.0107638, 0.00553847, 0.0938483,
-  -0.0106798, 0.999831, -0.0149774, 0.00180874,
-  -0.00569875, 0.0149172,0.999873, 0.0004859,
-  0.0, 0.0, 0.0, 1.0]
-
-
-
  Stream DEPTH - 36 modes:
-  640	x 480	@ 90Hz	Z16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 90Hz	DISPARITY16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 60Hz	Z16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 60Hz	DISPARITY16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 30Hz	Z16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 30Hz	DISPARITY16	57.3 x 44.5 degrees, distortion = NONE
-  628	x 468	@ 90Hz	Z16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 90Hz	DISPARITY16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 60Hz	Z16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 60Hz	DISPARITY16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 30Hz	Z16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 30Hz	DISPARITY16	56.4 x 43.5 degrees, distortion = NONE
-  492	x 372	@ 90Hz	Z16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 90Hz	DISPARITY16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 60Hz	Z16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 60Hz	DISPARITY16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 30Hz	Z16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 30Hz	DISPARITY16	56.9 x 44.6 degrees, distortion = NONE
-  480	x 360	@ 90Hz	Z16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 90Hz	DISPARITY16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 60Hz	Z16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 60Hz	DISPARITY16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 30Hz	Z16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 30Hz	DISPARITY16	55.7 x 43.3 degrees, distortion = NONE
-  332	x 252	@ 90Hz	Z16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 90Hz	DISPARITY16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 60Hz	Z16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 60Hz	DISPARITY16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 30Hz	Z16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 30Hz	DISPARITY16	56.8 x 44.6 degrees, distortion = NONE
-  320	x 240	@ 90Hz	Z16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 90Hz	DISPARITY16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 60Hz	Z16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 60Hz	DISPARITY16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 30Hz	Z16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 30Hz	DISPARITY16	55 x 42.7 degrees, distortion = NONE
+  640	x 480	@ 90Hz	Z16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 90Hz	DISPARITY16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 60Hz	Z16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 60Hz	DISPARITY16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 30Hz	Z16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 30Hz	DISPARITY16	57.5 x 44.7 degrees, distortion = NONE
+  628	x 468	@ 90Hz	Z16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 90Hz	DISPARITY16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 60Hz	Z16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 60Hz	DISPARITY16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 30Hz	Z16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 30Hz	DISPARITY16	56.6 x 43.7 degrees, distortion = NONE
+  492	x 372	@ 90Hz	Z16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 90Hz	DISPARITY16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 60Hz	Z16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 60Hz	DISPARITY16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 30Hz	Z16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 30Hz	DISPARITY16	57.1 x 44.7 degrees, distortion = NONE
+  480	x 360	@ 90Hz	Z16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 90Hz	DISPARITY16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 60Hz	Z16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 60Hz	DISPARITY16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 30Hz	Z16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 30Hz	DISPARITY16	55.9 x 43.4 degrees, distortion = NONE
+  332	x 252	@ 90Hz	Z16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 90Hz	DISPARITY16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 60Hz	Z16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 60Hz	DISPARITY16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 30Hz	Z16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 30Hz	DISPARITY16	57 x 44.8 degrees, distortion = NONE
+  320	x 240	@ 90Hz	Z16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 90Hz	DISPARITY16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 60Hz	Z16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 60Hz	DISPARITY16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 30Hz	Z16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 30Hz	DISPARITY16	55.3 x 42.9 degrees, distortion = NONE
  Stream COLOR - 72 modes:
-  1920	x 1080	@ 30Hz	YUYV	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 30Hz	RGB8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 30Hz	BGR8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 30Hz	RGBA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 30Hz	BGRA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 30Hz	RAW16	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 15Hz	YUYV	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 15Hz	RGB8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 15Hz	BGR8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 15Hz	RGBA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1920	x 1080	@ 15Hz	BGRA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1280	x 720	@ 15Hz	YUYV	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1280	x 720	@ 15Hz	RGB8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1280	x 720	@ 15Hz	BGR8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1280	x 720	@ 15Hz	RGBA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  1280	x 720	@ 15Hz	BGRA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  960	x 540	@ 15Hz	YUYV	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  960	x 540	@ 15Hz	RGB8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  960	x 540	@ 15Hz	BGR8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  960	x 540	@ 15Hz	RGBA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  960	x 540	@ 15Hz	BGRA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  848	x 480	@ 15Hz	YUYV	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  848	x 480	@ 15Hz	RGB8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  848	x 480	@ 15Hz	BGR8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  848	x 480	@ 15Hz	RGBA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  848	x 480	@ 15Hz	BGRA8	69.1 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 60Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 60Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 60Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 60Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 60Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 30Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 30Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 30Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 30Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 30Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 15Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 15Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 15Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 15Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 15Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 480	@ 15Hz	RAW16	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 360	@ 15Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 360	@ 15Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 360	@ 15Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 360	@ 15Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  640	x 360	@ 15Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  424	x 240	@ 15Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  424	x 240	@ 15Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  424	x 240	@ 15Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  424	x 240	@ 15Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  424	x 240	@ 15Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 60Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 60Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 60Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 60Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 60Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 30Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 30Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 30Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 30Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 30Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 15Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 15Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 15Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 15Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 240	@ 15Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 180	@ 15Hz	YUYV	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 180	@ 15Hz	RGB8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 180	@ 15Hz	BGR8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 180	@ 15Hz	RGBA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
-  320	x 180	@ 15Hz	BGRA8	54.6 x 42.2 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 30Hz	YUYV	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 30Hz	RGB8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 30Hz	BGR8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 30Hz	RGBA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 30Hz	BGRA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 30Hz	RAW16	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 15Hz	YUYV	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 15Hz	RGB8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 15Hz	BGR8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 15Hz	RGBA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1920	x 1080	@ 15Hz	BGRA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1280	x 720	@ 15Hz	YUYV	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1280	x 720	@ 15Hz	RGB8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1280	x 720	@ 15Hz	BGR8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1280	x 720	@ 15Hz	RGBA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  1280	x 720	@ 15Hz	BGRA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  960	x 540	@ 15Hz	YUYV	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  960	x 540	@ 15Hz	RGB8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  960	x 540	@ 15Hz	BGR8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  960	x 540	@ 15Hz	RGBA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  960	x 540	@ 15Hz	BGRA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  848	x 480	@ 15Hz	YUYV	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  848	x 480	@ 15Hz	RGB8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  848	x 480	@ 15Hz	BGR8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  848	x 480	@ 15Hz	RGBA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  848	x 480	@ 15Hz	BGRA8	70.1 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 60Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 60Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 60Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 60Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 60Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 30Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 30Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 30Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 30Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 30Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 15Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 15Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 15Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 15Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 15Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 480	@ 15Hz	RAW16	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 360	@ 15Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 360	@ 15Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 360	@ 15Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 360	@ 15Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  640	x 360	@ 15Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  424	x 240	@ 15Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  424	x 240	@ 15Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  424	x 240	@ 15Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  424	x 240	@ 15Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  424	x 240	@ 15Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 60Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 60Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 60Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 60Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 60Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 30Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 30Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 30Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 30Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 30Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 15Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 15Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 15Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 15Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 240	@ 15Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 180	@ 15Hz	YUYV	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 180	@ 15Hz	RGB8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 180	@ 15Hz	BGR8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 180	@ 15Hz	RGBA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
+  320	x 180	@ 15Hz	BGRA8	55.5 x 43.1 degrees, distortion = MODIFIED_BROWN_CONRADY
  Stream INFRARED - 36 modes:
-  640	x 480	@ 90Hz	Y8	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 90Hz	Y16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 60Hz	Y8	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 60Hz	Y16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 30Hz	Y8	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 30Hz	Y16	57.3 x 44.5 degrees, distortion = NONE
-  628	x 468	@ 90Hz	Y8	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 90Hz	Y16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 60Hz	Y8	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 60Hz	Y16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 30Hz	Y8	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 30Hz	Y16	56.4 x 43.5 degrees, distortion = NONE
-  492	x 372	@ 90Hz	Y8	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 90Hz	Y16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 60Hz	Y8	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 60Hz	Y16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 30Hz	Y8	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 30Hz	Y16	56.9 x 44.6 degrees, distortion = NONE
-  480	x 360	@ 90Hz	Y8	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 90Hz	Y16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 60Hz	Y8	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 60Hz	Y16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 30Hz	Y8	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 30Hz	Y16	55.7 x 43.3 degrees, distortion = NONE
-  332	x 252	@ 90Hz	Y8	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 90Hz	Y16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 60Hz	Y8	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 60Hz	Y16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 30Hz	Y8	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 30Hz	Y16	56.8 x 44.6 degrees, distortion = NONE
-  320	x 240	@ 90Hz	Y8	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 90Hz	Y16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 60Hz	Y8	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 60Hz	Y16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 30Hz	Y8	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 30Hz	Y16	55 x 42.7 degrees, distortion = NONE
+  640	x 480	@ 90Hz	Y8	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 90Hz	Y16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 60Hz	Y8	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 60Hz	Y16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 30Hz	Y8	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 30Hz	Y16	57.5 x 44.7 degrees, distortion = NONE
+  628	x 468	@ 90Hz	Y8	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 90Hz	Y16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 60Hz	Y8	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 60Hz	Y16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 30Hz	Y8	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 30Hz	Y16	56.6 x 43.7 degrees, distortion = NONE
+  492	x 372	@ 90Hz	Y8	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 90Hz	Y16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 60Hz	Y8	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 60Hz	Y16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 30Hz	Y8	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 30Hz	Y16	57.1 x 44.7 degrees, distortion = NONE
+  480	x 360	@ 90Hz	Y8	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 90Hz	Y16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 60Hz	Y8	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 60Hz	Y16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 30Hz	Y8	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 30Hz	Y16	55.9 x 43.4 degrees, distortion = NONE
+  332	x 252	@ 90Hz	Y8	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 90Hz	Y16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 60Hz	Y8	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 60Hz	Y16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 30Hz	Y8	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 30Hz	Y16	57 x 44.8 degrees, distortion = NONE
+  320	x 240	@ 90Hz	Y8	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 90Hz	Y16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 60Hz	Y8	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 60Hz	Y16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 30Hz	Y8	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 30Hz	Y16	55.3 x 42.9 degrees, distortion = NONE
  Stream INFRARED2 - 36 modes:
-  640	x 480	@ 90Hz	Y8	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 90Hz	Y16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 60Hz	Y8	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 60Hz	Y16	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 30Hz	Y8	57.3 x 44.5 degrees, distortion = NONE
-  640	x 480	@ 30Hz	Y16	57.3 x 44.5 degrees, distortion = NONE
-  628	x 468	@ 90Hz	Y8	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 90Hz	Y16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 60Hz	Y8	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 60Hz	Y16	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 30Hz	Y8	56.4 x 43.5 degrees, distortion = NONE
-  628	x 468	@ 30Hz	Y16	56.4 x 43.5 degrees, distortion = NONE
-  492	x 372	@ 90Hz	Y8	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 90Hz	Y16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 60Hz	Y8	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 60Hz	Y16	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 30Hz	Y8	56.9 x 44.6 degrees, distortion = NONE
-  492	x 372	@ 30Hz	Y16	56.9 x 44.6 degrees, distortion = NONE
-  480	x 360	@ 90Hz	Y8	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 90Hz	Y16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 60Hz	Y8	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 60Hz	Y16	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 30Hz	Y8	55.7 x 43.3 degrees, distortion = NONE
-  480	x 360	@ 30Hz	Y16	55.7 x 43.3 degrees, distortion = NONE
-  332	x 252	@ 90Hz	Y8	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 90Hz	Y16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 60Hz	Y8	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 60Hz	Y16	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 30Hz	Y8	56.8 x 44.6 degrees, distortion = NONE
-  332	x 252	@ 30Hz	Y16	56.8 x 44.6 degrees, distortion = NONE
-  320	x 240	@ 90Hz	Y8	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 90Hz	Y16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 60Hz	Y8	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 60Hz	Y16	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 30Hz	Y8	55 x 42.7 degrees, distortion = NONE
-  320	x 240	@ 30Hz	Y16	55 x 42.7 degrees, distortion = NONE
+  640	x 480	@ 90Hz	Y8	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 90Hz	Y16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 60Hz	Y8	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 60Hz	Y16	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 30Hz	Y8	57.5 x 44.7 degrees, distortion = NONE
+  640	x 480	@ 30Hz	Y16	57.5 x 44.7 degrees, distortion = NONE
+  628	x 468	@ 90Hz	Y8	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 90Hz	Y16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 60Hz	Y8	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 60Hz	Y16	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 30Hz	Y8	56.6 x 43.7 degrees, distortion = NONE
+  628	x 468	@ 30Hz	Y16	56.6 x 43.7 degrees, distortion = NONE
+  492	x 372	@ 90Hz	Y8	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 90Hz	Y16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 60Hz	Y8	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 60Hz	Y16	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 30Hz	Y8	57.1 x 44.7 degrees, distortion = NONE
+  492	x 372	@ 30Hz	Y16	57.1 x 44.7 degrees, distortion = NONE
+  480	x 360	@ 90Hz	Y8	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 90Hz	Y16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 60Hz	Y8	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 60Hz	Y16	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 30Hz	Y8	55.9 x 43.4 degrees, distortion = NONE
+  480	x 360	@ 30Hz	Y16	55.9 x 43.4 degrees, distortion = NONE
+  332	x 252	@ 90Hz	Y8	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 90Hz	Y16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 60Hz	Y8	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 60Hz	Y16	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 30Hz	Y8	57 x 44.8 degrees, distortion = NONE
+  332	x 252	@ 30Hz	Y16	57 x 44.8 degrees, distortion = NONE
+  320	x 240	@ 90Hz	Y8	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 90Hz	Y16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 60Hz	Y8	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 60Hz	Y16	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 30Hz	Y8	55.3 x 42.9 degrees, distortion = NONE
+  320	x 240	@ 30Hz	Y16	55.3 x 42.9 degrees, distortion = NONE
  Stream FISHEYE - 2 modes:
-  640	x 480	@ 60Hz	RAW8	102 x 86.4 degrees, distortion = FTHETA
-  640	x 480	@ 30Hz	RAW8	102 x 86.4 degrees, distortion = FTHETA
- Stream IMU :
-  Accelerometer samples at 250Hz, with a range of +-4G
-  Gyroscope samples at 200Hz, with a range of +-1000deg
+  640	x 480	@ 60Hz	RAW8	102 x 86.2 degrees, distortion = FTHETA
+  640	x 480	@ 30Hz	RAW8	102 x 86.2 degrees, distortion = FTHETA
+
+device intrinces:   model                    hfov   vfov      width  height fx     fy     ppx    ppy    coeffs
+color:              MODIFIED_BROWN_CONRADY   55.5   43.1      640    480    608    608    331    246    0.0644 -0.114 0.00127 0.00203 0
+depth:              NONE                     57.5   44.7      640    480    583    583    325    240    0 0 0 0 0
+fisheye:            FTHETA                   102    86.2      640    480    258    256    339    230    0.924 0 0 0 0
+infrared:           NONE                     57.5   44.7      640    480    583    583    325    240    0 0 0 0 0
+infrared2:          NONE                     57.5   44.7      640    480    583    583    325    240    0 0 0 0 0
+IMU:
+ acc.bias_variances 0.0001 0.0001 0.0001
+ acc.noise_variances 0.147 0.147 0.147
+ gyro.bias_variances 5e-07 5e-07 5e-07
+ gyro.noise_variances 0.000244 0.000244 0.000244
+device extrinces:   
+color2depth:
+0.999980     -0.000700    -0.006249    0.057460    
+0.000735     0.999983     0.005728     0.001073    
+0.006245     -0.005733    0.999964     0.002205    
+0.000000     0.000000     0.000000     1.000000    
+color2fisheye:
+0.999970    0.007366    -0.002452   0.086893   
+-0.007357   0.999966    0.003617    0.001020   
+0.002479    -0.003599   0.999990    0.001901   
+0.000000    0.000000    0.000000    1.000000   
+fisheye2imu:
+0.999938    0.007106    -0.008608   0.006866   
+-0.006956   0.999827    0.017241    0.002242   
+0.008729    -0.017180   0.999814    0.000020   
+0.000000    0.000000    0.000000    1.000000   
+color2imu:
+0.999835   0.014512   -0.010932  0.093775  
+-0.014281  0.999679   0.020920   0.003211  
+0.011232   -0.020761  0.999721   0.001930  
+0.000000   0.000000   0.000000   1.000000  
+q_color2imu: 
+-0.010421
+-0.005541
+-0.007199
+0.999904

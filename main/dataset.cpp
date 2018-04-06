@@ -1,9 +1,9 @@
 #include <librealsense/rs.hpp>
-#include "example.hpp"
-#include "concurrency.hpp"
+#include "../example.hpp"
+#include "../concurrency.hpp"
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "stb_image_write.h"
+#include "../stb_image_write.h"
 
 #include <opencv2/opencv.hpp>
 #include <GLFW/glfw3.h>
@@ -21,6 +21,12 @@
 #include <thread>
 #include <atomic>
 #include <map>
+
+#define tt 1000000.0
+//检测、创建文件夹
+#include <unistd.h>
+#include <sys/types.h>  
+#include <sys/stat.h>  
 using namespace std;
 using namespace cv;
 
@@ -66,7 +72,28 @@ int main() try
 {
     //init
     static string str;
-	str = "/home/zhuzunjie/Documents/data/RealsenseData/testdepthRGB/";
+	str = "/home/zhuzunjie/Data/RealsenseData/test1";
+    if(access(str.c_str(),0)==-1)
+    {
+	cout<<str<<"is not existing"<<endl;
+	cout<<"now make it"<<endl;
+	int flag=mkdir(str.c_str(),0777);
+	if(flag==0)
+	{
+		cout<<"make successful"<<endl;
+	}
+	else{
+		cout<<"make errorly"<<endl;
+		return 0;
+	}
+	mkdir((str+"/depth").c_str(),0777);
+	mkdir((str+"/depthRGB").c_str(),0777);
+	mkdir((str+"/color").c_str(),0777);
+	mkdir((str+"/infrared").c_str(),0777);
+	mkdir((str+"/infrared2").c_str(),0777);
+	mkdir((str+"/fisheye").c_str(),0777);
+    }
+    
     
     rs::context ctx;
     printf("There are %d connected RealSense devices.\n", ctx.get_device_count());
@@ -76,7 +103,6 @@ int main() try
     printf("\nUsing device 0, an %s\n", dev->get_name());
     printf("    Serial number: %s\n", dev->get_serial());
     printf("    Firmware version: %s\n", dev->get_firmware_version());
-    
     const auto streams = 5;
     std::vector<uint16_t> supported_streams = { (uint16_t)rs::stream::depth, (uint16_t)rs::stream::color, (uint16_t)rs::stream::infrared,(uint16_t)rs::stream::fisheye};
     const size_t max_queue_size = 1; // To minimize latency prefer frame drops
@@ -106,14 +132,14 @@ int main() try
     std::map<rs::stream, resolution> resolutions;
     
     static ofstream fimu,faccel,fgyro,fdepth,fcolor,finf,finf2,ffisheye;
-    fimu.open(str + "IMU.txt");
-    faccel.open(str + "ACCEL.txt");
-    fgyro.open(str + "GYRO.txt");
-    fdepth.open(str + "DEPTH.txt");
-    fcolor.open(str + "COLOR.txt");
-    finf.open(str + "INFRARED.txt");
-    finf2.open(str + "INFRARED2.txt");
-    ffisheye.open(str + "FISHEYE.txt");
+    fimu.open(str + "/IMU.txt");
+    faccel.open(str + "/ACCEL.txt");
+    fgyro.open(str + "/GYRO.txt");
+    fdepth.open(str + "/DEPTH.txt");
+    fcolor.open(str + "/COLOR.txt");
+    finf.open(str + "/INFRARED.txt");
+    finf2.open(str + "/INFRARED2.txt");
+    ffisheye.open(str + "/FISHEYE.txt");
 	fimu   << "#timestamp(ms) rx(rad s^-1) ry(rad s^-1) rz(rad s^-1) ax(m s^-2) ay(m s^-2) az(m s^-2)";
     faccel << "#timestamp(ms) ax(m s^-2) ay(m s^-2) az(m s^-2)" << endl;
     fgyro  << "#timestamp(ms) rx(rad s^-1) ry(rad s^-1) rz(rad s^-1)";
@@ -123,17 +149,16 @@ int main() try
     finf2  << "#timestamp(ms) filename" << endl;
     ffisheye << "#timestamp(ms) filename" << endl;
     
-	
-	
+//	double tt = pow(10,6);
 	static double gtime=0.0,atime=0.0,accel1,accel2,accel3;
     auto motion_callback = [](rs::motion_data entry)
     {
 		if (entry.timestamp_data.source_id == RS_EVENT_IMU_ACCEL)
 		{
-			faccel << fixed << setprecision(2) << entry.timestamp_data.timestamp << " "
+			faccel << fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << " "
 			<< fixed << setprecision(5) << entry.axes[0] << " " << entry.axes[1] << " " << entry.axes[2]
 			<< endl;
-			double t = entry.timestamp_data.timestamp;
+			double t = entry.timestamp_data.timestamp * tt;
 			if(t < gtime || gtime == 0.0 || atime >= gtime )
 			{
 				atime = t;
@@ -163,15 +188,15 @@ int main() try
 		if (entry.timestamp_data.source_id == RS_EVENT_IMU_GYRO)
 		{
 			fgyro << endl
-			<< fixed << setprecision(2) << entry.timestamp_data.timestamp << " "
+			<< fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << " "
 			<< fixed << setprecision(5) << entry.axes[0] << " " << entry.axes[1] << " " << entry.axes[2];
 			
 			fimu << endl
-			<< fixed << setprecision(2) << entry.timestamp_data.timestamp << " "
+			<< fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << " "
 			<< fixed << setprecision(5) << entry.axes[0] << " " << entry.axes[1] << " " << entry.axes[2];
 			
 			
-			gtime = entry.timestamp_data.timestamp;
+			gtime = entry.timestamp_data.timestamp * tt;
 		}
     };
 
@@ -208,54 +233,54 @@ int main() try
 	
     auto frame_callback = [](rs::frame frame){
 		if (frame.get_frame_timestamp_domain() != rs::timestamp_domain::microcontroller) return;
-		char buffer[10];
-		gcvt(frame.get_timestamp(),10,buffer);
+		char buffer[15];
+		gcvt(frame.get_timestamp() * tt,15,buffer);
 		
 		if (frame.get_stream_type() == rs::stream::depth)
 		{
-			fdepth << fixed << setprecision(2) << frame.get_timestamp() << " "
+			fdepth << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
 				<< buffer << ".png"
 				<< endl;
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_16UC1, (void*)(frame.get_data()), Mat::AUTO_STEP);
 			images[0].push_back(image.clone());
-			name[0].push_back(str + "depth/" + buffer + ".png");
-			name[5].push_back(str + "depthRGB/" + buffer + ".png");
+			name[0].push_back(str + "/depth/" + buffer + ".png");
+			name[5].push_back(str + "/depthRGB/" + buffer + ".png");
 			if (running && frames_queue[0].size() <= max_queue_size) frames_queue[0].enqueue(std::move(frame));
 		}
 		else if (frame.get_stream_type() == rs::stream::color)
 		{
-			fcolor << fixed << setprecision(2) << frame.get_timestamp() << " "
+			fcolor << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
 			<< buffer << ".png"
 			<< endl;
 			
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_8UC3, const_cast<void*>(frame.get_data()));
 			images[1].push_back(image.clone());
-			name[1].push_back(str + "color/" + buffer + ".png");
+			name[1].push_back(str + "/color/" + buffer + ".png");
 
 			if (running && frames_queue[1].size() <= max_queue_size) frames_queue[1].enqueue(std::move(frame));
 		}
 		else if (frame.get_stream_type() == rs::stream::infrared)
 		{
-			finf << fixed << setprecision(2) << frame.get_timestamp() << " "
+			finf << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
 			<< buffer << ".png"
 				<< endl;
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_8UC1, (void*)(frame.get_data()), Mat::AUTO_STEP);
 			images[2].push_back(image.clone());
-			name[2].push_back(str + "infrared/" + buffer + ".png");
+			name[2].push_back(str + "/infrared/" + buffer + ".png");
 			if (running && frames_queue[2].size() <= max_queue_size) frames_queue[2].enqueue(std::move(frame));
 		}
 		else if (frame.get_stream_type() == rs::stream::infrared2)
 		{
-			finf2 << fixed << setprecision(2) << frame.get_timestamp() << " "
+			finf2 << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
 			<< buffer << ".png"
 				<< endl;
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_8UC1, (void*)(frame.get_data()), Mat::AUTO_STEP);
 			images[3].push_back(image.clone());
-			name[3].push_back(str + "infrared2/" + buffer + ".png");
+			name[3].push_back(str + "/infrared2/" + buffer + ".png");
 		}
 		else if (frame.get_stream_type() == rs::stream::fisheye)
 		{
-			ffisheye << fixed << setprecision(2) << frame.get_timestamp() << " "
+			ffisheye << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
 			<< buffer << ".png"
 				<< endl;
 	// 	    stbi_write_png((str + "lab/fisheye/" + buffer + ".png").c_str(),
@@ -264,7 +289,7 @@ int main() try
 	// 			    components_map[frame.get_stream_type()],
 	// 			    frame.get_data(),
 	// 			    frame.get_width() * components_map[frame.get_stream_type()]);
-			name[4].push_back(str + "fisheye/" + buffer + ".png");
+			name[4].push_back(str + "/fisheye/" + buffer + ".png");
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_8UC1, (void*)(frame.get_data()), Mat::AUTO_STEP);
 			images[4].push_back(image.clone());
 			if (running && frames_queue[4].size() <= max_queue_size) frames_queue[4].enqueue(std::move(frame));
@@ -335,39 +360,7 @@ int main() try
 // 	std::cout<< color_to_imu.rotation<<std::endl;
 // 	std::cout<< color_to_imu.translation<<std::endl;
     
-/*	//get extrinsics	
-	rs::extrinsics fisheye_to_imu = dev->get_motion_extrinsics_from(rs::stream::fisheye);
 
-
-	rs::extrinsics color_to_fisheye = dev->get_extrinsics(rs::stream::color,rs::stream::fisheye);
-// 	rs::extrinsics color_to_imu = dev->get_motion_extrinsics_from(rs::stream::color);
-	
-	Eigen::Matrix4f Mfisheye_to_imu;
-	Eigen::Matrix4f Mcolor_to_fisheye;
-	Eigen::Matrix4f Mcolor_to_imu;
-	
-	for(int ii=0;ii<3;ii++)
-	{
-		for(int jj=0;jj<3;jj++)
-		{
-			int n=ii*3+jj;
-			Mfisheye_to_imu(ii,jj) = fisheye_to_imu.rotation[n];
-			
-			Mcolor_to_fisheye(ii,jj) = color_to_fisheye.rotation[n];
-		}
-		Mfisheye_to_imu(ii,3) = fisheye_to_imu.translation[ii];
-		Mcolor_to_fisheye(ii,3) = color_to_fisheye.translation[ii];
-		Mfisheye_to_imu(3,ii) = 0.0;
-		Mcolor_to_fisheye(3,ii) = 0.0;
-	}
-	Mfisheye_to_imu(3,3) = 1.0;
-	Mcolor_to_fisheye(3,3) = 1.0;
-	
-	Mcolor_to_imu = Mcolor_to_fisheye * Mfisheye_to_imu;
-	cout<<Mfisheye_to_imu<<endl;
-	cout<<Mcolor_to_fisheye<<endl;
-	cout<<Mcolor_to_imu<<endl;
-		*/
     // 4. stop data acquisition
     running = false;
     for (int i=0;i<5;i++) frames_queue[i].clear();
@@ -376,7 +369,7 @@ int main() try
     dev->disable_motion_tracking();
 
     //save images.
-    for(int j=0; j<2;j++)
+    for(int j=0; j<5;j++)
 		for(int i=0;i<images[j].size();i++)
 			imwrite(name[j][i],images[j][i]);
 	int width = images[0][0].cols;

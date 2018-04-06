@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
+set(OpenCV_DIR "/home/zhuzunjie/Thirdparty/opencv-3.1.0/build")
 project(BGR)
 
 set(CMAKE_CXX_COMPILE "g++")
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
@@ -50,5 +51,8 @@ else()
     include_directories(${GLFW_INCLUDE_DIR})
 endif()
 
-add_executable(dataset dataset.cpp)
+add_executable(dataset main/dataset.cpp)
 target_link_libraries(dataset ${DEPENDENCIES}) 
+
+add_executable(device_info main/cpp-enumerate-devices.cpp)
+target_link_libraries(device_info ${DEPENDENCIES})
