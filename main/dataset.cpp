@@ -68,30 +68,36 @@ void make_depth_histogram(Mat rgb_image, Mat depth_image, int width, int height)
 		}
 }
 
-int main() try
+int main(int argc, char** argv) try
 {
+    if(argc != 2)
+    {
+        cerr << "Usage: ./dataset"
+                "path_to_dir" <<endl;
+    }
+
     //init
     static string str;
-	str = "/home/zhuzunjie/Data/RealsenseData/slow";
+	str = argv[1];
     if(access(str.c_str(),0)==-1)
     {
-	cout<<str<<"is not existing"<<endl;
-	cout<<"now make it"<<endl;
-	int flag=mkdir(str.c_str(),0777);
-	if(flag==0)
-	{
-		cout<<"make successful"<<endl;
-	}
-	else{
-		cout<<"make errorly"<<endl;
-		return 0;
-	}
-	mkdir((str+"/depth").c_str(),0777);
-	mkdir((str+"/depthRGB").c_str(),0777);
-	mkdir((str+"/color").c_str(),0777);
-	mkdir((str+"/infrared").c_str(),0777);
-	mkdir((str+"/infrared2").c_str(),0777);
-	mkdir((str+"/fisheye").c_str(),0777);
+        cout<<str<<"is not existing"<<endl;
+        cout<<"now make it"<<endl;
+        int flag=mkdir(str.c_str(),0777);
+        if(flag==0)
+        {
+            cout<<"make successful"<<endl;
+        }
+        else{
+            cout<<"make errorly"<<endl;
+            return 0;
+        }
+        mkdir((str+"/depth").c_str(),0777);
+        mkdir((str+"/depthRGB").c_str(),0777);
+        mkdir((str+"/color").c_str(),0777);
+        mkdir((str+"/infrared").c_str(),0777);
+        mkdir((str+"/infrared2").c_str(),0777);
+        mkdir((str+"/fisheye").c_str(),0777);
     }
     
     
