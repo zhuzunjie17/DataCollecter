@@ -159,7 +159,7 @@ int main() try
         rs::extrinsics color2fisheye = dev->get_extrinsics(rs::stream::color, rs::stream::fisheye);
         rs::extrinsics fisheye2color = dev->get_extrinsics(rs::stream::fisheye, rs::stream::color);
         rs::extrinsics fisheye2imu = dev->get_motion_extrinsics_from(rs::stream::fisheye);
-
+        rs::extrinsics fisheye2depth = dev->get_extrinsics(rs::stream::fisheye, rs::stream::depth);
         std::cout << std::setw(20) << "device extrinces:" << std::endl;
 
 

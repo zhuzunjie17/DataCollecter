@@ -72,7 +72,7 @@ int main() try
 {
     //init
     static string str;
-	str = "/home/zhuzunjie/Data/RealsenseData/test1";
+	str = "/home/zhuzunjie/Data/RealsenseData/slow";
     if(access(str.c_str(),0)==-1)
     {
 	cout<<str<<"is not existing"<<endl;
@@ -155,8 +155,8 @@ int main() try
     {
 		if (entry.timestamp_data.source_id == RS_EVENT_IMU_ACCEL)
 		{
-			faccel << fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << " "
-			<< fixed << setprecision(5) << entry.axes[0] << " " << entry.axes[1] << " " << entry.axes[2]
+			faccel << fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << ","
+			<< fixed << setprecision(5) << entry.axes[0] << "," << entry.axes[1] << "," << entry.axes[2]
 			<< endl;
 			double t = entry.timestamp_data.timestamp * tt;
 			if(t < gtime || gtime == 0.0 || atime >= gtime )
@@ -168,13 +168,13 @@ int main() try
 			}	
 			else 
 			{
-				fgyro << " " << ((t-gtime)*accel1+(gtime-atime)*entry.axes[0])/(t-atime)
-				<< " " << ((t-gtime)*accel2+(gtime-atime)*entry.axes[1])/(t-atime)
-				<< " " << ((t-gtime)*accel3+(gtime-atime)*entry.axes[2])/(t-atime);
+				fgyro << "," << ((t-gtime)*accel1+(gtime-atime)*entry.axes[0])/(t-atime)
+				<< "," << ((t-gtime)*accel2+(gtime-atime)*entry.axes[1])/(t-atime)
+				<< "," << ((t-gtime)*accel3+(gtime-atime)*entry.axes[2])/(t-atime);
 				
-				fimu << " " << ((t-gtime)*accel1+(gtime-atime)*entry.axes[0])/(t-atime)
-				<< " " << ((t-gtime)*accel2+(gtime-atime)*entry.axes[1])/(t-atime)
-				<< " " << ((t-gtime)*accel3+(gtime-atime)*entry.axes[2])/(t-atime);
+				fimu << "," << ((t-gtime)*accel1+(gtime-atime)*entry.axes[0])/(t-atime)
+				<< "," << ((t-gtime)*accel2+(gtime-atime)*entry.axes[1])/(t-atime)
+				<< "," << ((t-gtime)*accel3+(gtime-atime)*entry.axes[2])/(t-atime);
 				
 				
 				atime = t;
@@ -188,12 +188,12 @@ int main() try
 		if (entry.timestamp_data.source_id == RS_EVENT_IMU_GYRO)
 		{
 			fgyro << endl
-			<< fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << " "
-			<< fixed << setprecision(5) << entry.axes[0] << " " << entry.axes[1] << " " << entry.axes[2];
+			<< fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << ","
+			<< fixed << setprecision(5) << entry.axes[0] << "," << entry.axes[1] << "," << entry.axes[2];
 			
 			fimu << endl
-			<< fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << " "
-			<< fixed << setprecision(5) << entry.axes[0] << " " << entry.axes[1] << " " << entry.axes[2];
+			<< fixed << setprecision(2) << entry.timestamp_data.timestamp * tt << ","
+			<< fixed << setprecision(5) << entry.axes[0] << "," << entry.axes[1] << "," << entry.axes[2];
 			
 			
 			gtime = entry.timestamp_data.timestamp * tt;
@@ -238,7 +238,7 @@ int main() try
 		
 		if (frame.get_stream_type() == rs::stream::depth)
 		{
-			fdepth << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
+			fdepth << fixed << setprecision(2) << frame.get_timestamp() * tt << ","
 				<< buffer << ".png"
 				<< endl;
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_16UC1, (void*)(frame.get_data()), Mat::AUTO_STEP);
@@ -249,7 +249,7 @@ int main() try
 		}
 		else if (frame.get_stream_type() == rs::stream::color)
 		{
-			fcolor << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
+			fcolor << fixed << setprecision(2) << frame.get_timestamp() * tt << ","
 			<< buffer << ".png"
 			<< endl;
 			
@@ -261,7 +261,7 @@ int main() try
 		}
 		else if (frame.get_stream_type() == rs::stream::infrared)
 		{
-			finf << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
+			finf << fixed << setprecision(2) << frame.get_timestamp() * tt << ","
 			<< buffer << ".png"
 				<< endl;
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_8UC1, (void*)(frame.get_data()), Mat::AUTO_STEP);
@@ -271,7 +271,7 @@ int main() try
 		}
 		else if (frame.get_stream_type() == rs::stream::infrared2)
 		{
-			finf2 << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
+			finf2 << fixed << setprecision(2) << frame.get_timestamp() * tt << ","
 			<< buffer << ".png"
 				<< endl;
 			Mat image(Size(frame.get_width(),frame.get_height()), CV_8UC1, (void*)(frame.get_data()), Mat::AUTO_STEP);
@@ -280,7 +280,7 @@ int main() try
 		}
 		else if (frame.get_stream_type() == rs::stream::fisheye)
 		{
-			ffisheye << fixed << setprecision(2) << frame.get_timestamp() * tt << " "
+			ffisheye << fixed << setprecision(2) << frame.get_timestamp() * tt << ","
 			<< buffer << ".png"
 				<< endl;
 	// 	    stbi_write_png((str + "lab/fisheye/" + buffer + ".png").c_str(),
